@@ -1,0 +1,22 @@
+{
+  ".gitignore": { "file": { "contents": "node_modules\n" } },
+  "package.json": {
+    "file": {
+      "contents": "{\n  \"scripts\": {\n    \"dev\": \"tsx watch src/index.ts\"\n  },\n  \"dependencies\": {\n    \"@hono/node-server\": \"^1.11.1\",\n    \"hono\": \"^4.3.6\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"^20.11.17\",\n    \"tsx\": \"^4.7.1\"\n  }\n}\n"
+    }
+  },
+  "src": {
+    "directory": {
+      "index.ts": {
+        "file": {
+          "contents": "import { serve } from '@hono/node-server'\nimport { Hono } from 'hono'\n\nconst app = new Hono()\n\napp.get('/', (c) => {\n  return c.text('Hello Hono!')\n})\n\nconst port = 3000\nconsole.log(`Server is running on port ${port}`)\n\nserve({\n  fetch: app.fetch,\n  port\n})\n"
+        }
+      }
+    }
+  },
+  "tsconfig.json": {
+    "file": {
+      "contents": "{\n  \"compilerOptions\": {\n    \"target\": \"ESNext\",\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"Bundler\",\n    \"strict\": true,\n    \"skipLibCheck\": true,\n    \"types\": [\n      \"node\"\n    ],\n    \"jsx\": \"react-jsx\",\n    \"jsxImportSource\": \"hono/jsx\",\n  }\n}"
+    }
+  }
+}

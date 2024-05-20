@@ -1,0 +1,16 @@
+{
+  "package.json": {
+    "file": {
+      "contents": "{\"name\":\"next\",\"version\":\"0.1.0\",\"description\":\"Fancy Next.js app\",\"scripts\":{\"dev\":\"next\",\"build\":\"next build\",\"start\":\"next start\",\"build:static\":\"next build && next out\"}}\n"
+    }
+  },
+  "pages": {
+    "directory": {
+      "index.js": {
+        "file": {
+          "contents": "export default () => (\n\t<main>\n\t\t<h1>Welcome to Next.js</h1>\n\t</main>\n)\n"
+        }
+      }
+    }
+  }
+}

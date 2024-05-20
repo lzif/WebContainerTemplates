@@ -1,0 +1,12 @@
+{
+  "index.js": {
+    "file": {
+      "contents": "import Fastify from 'fastify'\nconst fastify = Fastify({\n  logger: true\n})\n\n// Declare a route\nfastify.get('/', async function handler (request, reply) {\n  return { hello: 'world' }\n})\n\n// Run the server!\ntry {\n  await fastify.listen({ port: 3000 })\n} catch (err) {\n  fastify.log.error(err)\n  process.exit(1)\n}\n"
+    }
+  },
+  "package.json": {
+    "file": {
+      "contents": "{\n  \"name\": \"fastify\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {\n    \"fastify\": \"^4.27.0\"\n  }\n}\n"
+    }
+  }
+}

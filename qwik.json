@@ -1,0 +1,82 @@
+{
+  ".gitignore": {
+    "file": {
+      "contents": "# Logs\nlogs\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\nlerna-debug.log*\n\nnode_modules\ndist\ndist-ssr\n*.local\n\n# Editor directories and files\n.vscode/*\n!.vscode/extensions.json\n.idea\n.DS_Store\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?\n"
+    }
+  },
+  "README.md": {
+    "file": {
+      "contents": "# Qwik + Vite\n\n## Qwik in CSR mode\n\nThis starter is using a pure CSR (Client Side Rendering) mode. This means, that the application is fully bootstrapped in the browser. Most of Qwik innovations however take advantage of SSR (Server Side Rendering) mode.\n\n```ts\nexport default defineConfig({\n  plugins: [\n    qwikVite({\n      csr: true,\n    }),\n  ],\n})\n```\n\nUse `npm create qwik@latest` to create a full production ready Qwik application, using SSR and [QwikCity](https://qwik.builder.io/docs/qwikcity/), our server-side metaframwork.\n\n## Usage\n\n```bash\n$ npm install # or pnpm install or yarn install\n```\n\nLearn more on the [Qwik Website](https://qwik.builder.io) and join our community on our [Discord](https://qwik.builder.io/chat)\n\n## Available Scripts\n\nIn the project directory, you can run:\n\n### `npm run dev`\n\nRuns the app in the development mode.<br>\nOpen [http://localhost:5173](http://localhost:5173) to view it in the browser.\n\n### `npm run build`\n\nBuilds the app for production to the `dist` folder.<br>\n"
+    }
+  },
+  "index.html": {
+    "file": {
+      "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Vite + Qwik + TS</title>\n  </head>\n  <body>\n    <div id=\"app\"></div>\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\n  </body>\n</html>\n"
+    }
+  },
+  "package.json": {
+    "file": {
+      "contents": "{\n  \"name\": \"qwik\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"tsc && vite build\",\n    \"preview\": \"serve dist\"\n  },\n  \"devDependencies\": {\n    \"serve\": \"^14.2.1\",\n    \"typescript\": \"^5.2.2\",\n    \"vite\": \"^5.2.0\"\n  },\n  \"dependencies\": {\n    \"@builder.io/qwik\": \"^1.5.1\"\n  }\n}\n"
+    }
+  },
+  "public": {
+    "directory": {
+      "vite.svg": {
+        "file": {
+          "contents": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" aria-hidden=\"true\" role=\"img\" class=\"iconify iconify--logos\" width=\"31.88\" height=\"32\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 256 257\"><defs><linearGradient id=\"IconifyId1813088fe1fbc01fb466\" x1=\"-.828%\" x2=\"57.636%\" y1=\"7.652%\" y2=\"78.411%\"><stop offset=\"0%\" stop-color=\"#41D1FF\"></stop><stop offset=\"100%\" stop-color=\"#BD34FE\"></stop></linearGradient><linearGradient id=\"IconifyId1813088fe1fbc01fb467\" x1=\"43.376%\" x2=\"50.316%\" y1=\"2.242%\" y2=\"89.03%\"><stop offset=\"0%\" stop-color=\"#FFEA83\"></stop><stop offset=\"8.333%\" stop-color=\"#FFDD35\"></stop><stop offset=\"100%\" stop-color=\"#FFA800\"></stop></linearGradient></defs><path fill=\"url(#IconifyId1813088fe1fbc01fb466)\" d=\"M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z\"></path><path fill=\"url(#IconifyId1813088fe1fbc01fb467)\" d=\"M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z\"></path></svg>"
+        }
+      }
+    }
+  },
+  "src": {
+    "directory": {
+      "app.css": {
+        "file": {
+          "contents": "#app {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 2rem;\n  text-align: center;\n}\n\n.logo {\n  height: 6em;\n  padding: 1.5em;\n}\n.logo:hover {\n  filter: drop-shadow(0 0 2em #646cffaa);\n}\n.logo.qwik:hover {\n  filter: drop-shadow(0 0 2em #673ab8aa);\n}\n.card {\n  padding: 2em;\n}\n\n.read-the-docs {\n  color: #888;\n}\n"
+        }
+      },
+      "app.tsx": {
+        "file": {
+          "contents": "import { component$, useSignal } from '@builder.io/qwik'\n\nimport qwikLogo from './assets/qwik.svg'\nimport viteLogo from '/vite.svg'\nimport './app.css'\n\nexport const App = component$(() => {\n  const count = useSignal(0)\n\n  return (\n    <>\n      <div>\n        <a href=\"https://vitejs.dev\" target=\"_blank\">\n          <img src={viteLogo} class=\"logo\" alt=\"Vite logo\" />\n        </a>\n        <a href=\"https://qwik.builder.io\" target=\"_blank\">\n          <img src={qwikLogo} class=\"logo qwik\" alt=\"Qwik logo\" />\n        </a>\n      </div>\n      <h1>Vite + Qwik</h1>\n      <div class=\"card\">\n        <button onClick$={() => count.value++}>count is {count.value}</button>\n      </div>\n      <p class=\"read-the-docs\">\n        Click on the Vite and Qwik logos to learn more\n      </p>\n    </>\n  )\n})\n"
+        }
+      },
+      "assets": {
+        "directory": {
+          "qwik.svg": {
+            "file": {
+              "contents": "<svg width=\"110\" height=\"118\" viewBox=\"0 0 110 118\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M96.8285 117.176L75.9674 96.4188L75.67 96.4705V96.2507L31.3094 52.3816L42.2638 41.8282L35.8231 4.91711L5.33977 42.7335C0.166531 47.9585 -0.829317 56.5072 2.92128 62.7798L21.9717 94.4012C24.8817 99.2511 29.46 102.368 35.849 102.135C49.377 101.657 55.3262 101.657 55.3262 101.657L96.8156 117.163L96.8285 117.176Z\" fill=\"#18B6F6\"/>\n<path d=\"M107.134 59.0164C110.134 52.8214 111.208 47.4024 108.246 41.9576L104.03 34.1977L101.844 30.2143L100.991 28.6624L100.913 28.7529L89.4413 8.84886C86.5443 3.81789 81.19 0.752745 75.3571 0.804478L65.2952 1.08901L35.2645 1.1666C29.5869 1.21834 24.3749 4.20588 21.4908 9.10753L3.24219 45.3461L35.8983 4.72321L78.7327 51.8256L71.0634 59.5983L75.6417 96.4447L75.7063 96.3671V96.4706H75.6417L75.7322 96.5611L79.3017 100.04L96.5804 116.918C97.3046 117.616 98.4815 116.776 98.003 115.909L87.3203 94.8928\" fill=\"#AC7EF4\"/>\n<path d=\"M78.8354 51.7092L35.8846 4.8396L41.989 41.5437L31.0605 52.1489L75.5633 96.3801L71.5541 59.663L78.8354 51.7221V51.7092Z\" fill=\"white\"/>\n</svg>\n"
+            }
+          }
+        }
+      },
+      "index.css": {
+        "file": {
+          "contents": ":root {\n  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;\n  line-height: 1.5;\n  font-weight: 400;\n\n  color-scheme: light dark;\n  color: rgba(255, 255, 255, 0.87);\n  background-color: #242424;\n\n  font-synthesis: none;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\na {\n  font-weight: 500;\n  color: #646cff;\n  text-decoration: inherit;\n}\na:hover {\n  color: #535bf2;\n}\n\nbody {\n  margin: 0;\n  display: flex;\n  place-items: center;\n  min-width: 320px;\n  min-height: 100vh;\n}\n\nh1 {\n  font-size: 3.2em;\n  line-height: 1.1;\n}\n\nbutton {\n  border-radius: 8px;\n  border: 1px solid transparent;\n  padding: 0.6em 1.2em;\n  font-size: 1em;\n  font-weight: 500;\n  font-family: inherit;\n  background-color: #1a1a1a;\n  cursor: pointer;\n  transition: border-color 0.25s;\n}\nbutton:hover {\n  border-color: #646cff;\n}\nbutton:focus,\nbutton:focus-visible {\n  outline: 4px auto -webkit-focus-ring-color;\n}\n\n@media (prefers-color-scheme: light) {\n  :root {\n    color: #213547;\n    background-color: #ffffff;\n  }\n  a:hover {\n    color: #747bff;\n  }\n  button {\n    background-color: #f9f9f9;\n  }\n}\n"
+        }
+      },
+      "main.tsx": {
+        "file": {
+          "contents": "import '@builder.io/qwik/qwikloader.js'\n\nimport { render } from '@builder.io/qwik'\nimport { App } from './app.tsx'\nimport './index.css'\n\nrender(document.getElementById('app') as HTMLElement, <App />)\n"
+        }
+      },
+      "vite-env.d.ts": {
+        "file": { "contents": "/// <reference types=\"vite/client\" />\n" }
+      }
+    }
+  },
+  "tsconfig.json": {
+    "file": {
+      "contents": "{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"useDefineForClassFields\": true,\n    \"module\": \"ESNext\",\n    \"lib\": [\"ES2020\", \"DOM\", \"DOM.Iterable\"],\n    \"skipLibCheck\": true,\n\n    /* Bundler mode */\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\",\n    \"jsxImportSource\": \"@builder.io/qwik\",\n\n    /* Linting */\n    \"strict\": true,\n    \"noUnusedLocals\": true,\n    \"noUnusedParameters\": true,\n    \"noFallthroughCasesInSwitch\": true\n  },\n  \"include\": [\"src\"],\n  \"references\": [{ \"path\": \"./tsconfig.node.json\" }]\n}\n"
+    }
+  },
+  "tsconfig.node.json": {
+    "file": {
+      "contents": "{\n  \"compilerOptions\": {\n    \"composite\": true,\n    \"skipLibCheck\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"bundler\",\n    \"allowSyntheticDefaultImports\": true,\n    \"strict\": true\n  },\n  \"include\": [\"vite.config.ts\"]\n}\n"
+    }
+  },
+  "vite.config.ts": {
+    "file": {
+      "contents": "import { defineConfig } from 'vite'\nimport { qwikVite } from '@builder.io/qwik/optimizer'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  plugins: [\n    qwikVite({\n      csr: true,\n    }),\n  ],\n})\n"
+    }
+  }
+}

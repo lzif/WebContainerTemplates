@@ -1,0 +1,12 @@
+{
+  "index.js": {
+    "file": {
+      "contents": "const express = require('express')\nconst app = express()\nconst port = 3000\n\napp.get('/', (req, res) => {\n  res.send('Hello World!')\n})\n\napp.listen(port, () => {\n  console.log(`Example app listening on port ${port}`)\n})\n"
+    }
+  },
+  "package.json": {
+    "file": {
+      "contents": "{\n  \"name\": \"express\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {\n    \"express\": \"^4.19.2\"\n  }\n}\n"
+    }
+  }
+}

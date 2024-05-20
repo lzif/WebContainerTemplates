@@ -1,0 +1,82 @@
+{
+  ".gitignore": {
+    "file": {
+      "contents": "# Logs\nlogs\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\nlerna-debug.log*\n\nnode_modules\ndist\ndist-ssr\n*.local\n\n# Editor directories and files\n.vscode/*\n!.vscode/extensions.json\n.idea\n.DS_Store\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?\n"
+    }
+  },
+  "README.md": {
+    "file": {
+      "contents": "## Usage\n\n```bash\n$ npm install # or pnpm install or yarn install\n```\n\n### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)\n\n## Available Scripts\n\nIn the project directory, you can run:\n\n### `npm run dev`\n\nRuns the app in the development mode.<br>\nOpen [http://localhost:5173](http://localhost:5173) to view it in the browser.\n\n### `npm run build`\n\nBuilds the app for production to the `dist` folder.<br>\nIt correctly bundles Solid in production mode and optimizes the build for the best performance.\n\nThe build is minified and the filenames include the hashes.<br>\nYour app is ready to be deployed!\n\n## Deployment\n\nLearn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)\n"
+    }
+  },
+  "index.html": {
+    "file": {
+      "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Vite + Solid + TS</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/index.tsx\"></script>\n  </body>\n</html>\n"
+    }
+  },
+  "package.json": {
+    "file": {
+      "contents": "{\n  \"name\": \"solid\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"tsc && vite build\",\n    \"preview\": \"vite preview\"\n  },\n  \"dependencies\": {\n    \"solid-js\": \"^1.8.15\"\n  },\n  \"devDependencies\": {\n    \"typescript\": \"^5.2.2\",\n    \"vite\": \"^5.2.0\",\n    \"vite-plugin-solid\": \"^2.10.2\"\n  }\n}\n"
+    }
+  },
+  "public": {
+    "directory": {
+      "vite.svg": {
+        "file": {
+          "contents": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" aria-hidden=\"true\" role=\"img\" class=\"iconify iconify--logos\" width=\"31.88\" height=\"32\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 256 257\"><defs><linearGradient id=\"IconifyId1813088fe1fbc01fb466\" x1=\"-.828%\" x2=\"57.636%\" y1=\"7.652%\" y2=\"78.411%\"><stop offset=\"0%\" stop-color=\"#41D1FF\"></stop><stop offset=\"100%\" stop-color=\"#BD34FE\"></stop></linearGradient><linearGradient id=\"IconifyId1813088fe1fbc01fb467\" x1=\"43.376%\" x2=\"50.316%\" y1=\"2.242%\" y2=\"89.03%\"><stop offset=\"0%\" stop-color=\"#FFEA83\"></stop><stop offset=\"8.333%\" stop-color=\"#FFDD35\"></stop><stop offset=\"100%\" stop-color=\"#FFA800\"></stop></linearGradient></defs><path fill=\"url(#IconifyId1813088fe1fbc01fb466)\" d=\"M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z\"></path><path fill=\"url(#IconifyId1813088fe1fbc01fb467)\" d=\"M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z\"></path></svg>"
+        }
+      }
+    }
+  },
+  "src": {
+    "directory": {
+      "App.css": {
+        "file": {
+          "contents": "#root {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 2rem;\n  text-align: center;\n}\n\n.logo {\n  height: 6em;\n  padding: 1.5em;\n  will-change: filter;\n  transition: filter 300ms;\n}\n.logo:hover {\n  filter: drop-shadow(0 0 2em #646cffaa);\n}\n.logo.solid:hover {\n  filter: drop-shadow(0 0 2em #61dafbaa);\n}\n\n.card {\n  padding: 2em;\n}\n\n.read-the-docs {\n  color: #888;\n}\n"
+        }
+      },
+      "App.tsx": {
+        "file": {
+          "contents": "import { createSignal } from 'solid-js'\nimport solidLogo from './assets/solid.svg'\nimport viteLogo from '/vite.svg'\nimport './App.css'\n\nfunction App() {\n  const [count, setCount] = createSignal(0)\n\n  return (\n    <>\n      <div>\n        <a href=\"https://vitejs.dev\" target=\"_blank\">\n          <img src={viteLogo} class=\"logo\" alt=\"Vite logo\" />\n        </a>\n        <a href=\"https://solidjs.com\" target=\"_blank\">\n          <img src={solidLogo} class=\"logo solid\" alt=\"Solid logo\" />\n        </a>\n      </div>\n      <h1>Vite + Solid</h1>\n      <div class=\"card\">\n        <button onClick={() => setCount((count) => count + 1)}>\n          count is {count()}\n        </button>\n        <p>\n          Edit <code>src/App.tsx</code> and save to test HMR\n        </p>\n      </div>\n      <p class=\"read-the-docs\">\n        Click on the Vite and Solid logos to learn more\n      </p>\n    </>\n  )\n}\n\nexport default App\n"
+        }
+      },
+      "assets": {
+        "directory": {
+          "solid.svg": {
+            "file": {
+              "contents": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 166 155.3\"><path d=\"M163 35S110-4 69 5l-3 1c-6 2-11 5-14 9l-2 3-15 26 26 5c11 7 25 10 38 7l46 9 18-30z\" fill=\"#76b3e1\"/><linearGradient id=\"a\" gradientUnits=\"userSpaceOnUse\" x1=\"27.5\" y1=\"3\" x2=\"152\" y2=\"63.5\"><stop offset=\".1\" stop-color=\"#76b3e1\"/><stop offset=\".3\" stop-color=\"#dcf2fd\"/><stop offset=\"1\" stop-color=\"#76b3e1\"/></linearGradient><path d=\"M163 35S110-4 69 5l-3 1c-6 2-11 5-14 9l-2 3-15 26 26 5c11 7 25 10 38 7l46 9 18-30z\" opacity=\".3\" fill=\"url(#a)\"/><path d=\"M52 35l-4 1c-17 5-22 21-13 35 10 13 31 20 48 15l62-21S92 26 52 35z\" fill=\"#518ac8\"/><linearGradient id=\"b\" gradientUnits=\"userSpaceOnUse\" x1=\"95.8\" y1=\"32.6\" x2=\"74\" y2=\"105.2\"><stop offset=\"0\" stop-color=\"#76b3e1\"/><stop offset=\".5\" stop-color=\"#4377bb\"/><stop offset=\"1\" stop-color=\"#1f3b77\"/></linearGradient><path d=\"M52 35l-4 1c-17 5-22 21-13 35 10 13 31 20 48 15l62-21S92 26 52 35z\" opacity=\".3\" fill=\"url(#b)\"/><linearGradient id=\"c\" gradientUnits=\"userSpaceOnUse\" x1=\"18.4\" y1=\"64.2\" x2=\"144.3\" y2=\"149.8\"><stop offset=\"0\" stop-color=\"#315aa9\"/><stop offset=\".5\" stop-color=\"#518ac8\"/><stop offset=\"1\" stop-color=\"#315aa9\"/></linearGradient><path d=\"M134 80a45 45 0 00-48-15L24 85 4 120l112 19 20-36c4-7 3-15-2-23z\" fill=\"url(#c)\"/><linearGradient id=\"d\" gradientUnits=\"userSpaceOnUse\" x1=\"75.2\" y1=\"74.5\" x2=\"24.4\" y2=\"260.8\"><stop offset=\"0\" stop-color=\"#4377bb\"/><stop offset=\".5\" stop-color=\"#1a336b\"/><stop offset=\"1\" stop-color=\"#1a336b\"/></linearGradient><path d=\"M114 115a45 45 0 00-48-15L4 120s53 40 94 30l3-1c17-5 23-21 13-34z\" fill=\"url(#d)\"/></svg>"
+            }
+          }
+        }
+      },
+      "index.css": {
+        "file": {
+          "contents": ":root {\n  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;\n  line-height: 1.5;\n  font-weight: 400;\n\n  color-scheme: light dark;\n  color: rgba(255, 255, 255, 0.87);\n  background-color: #242424;\n\n  font-synthesis: none;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\na {\n  font-weight: 500;\n  color: #646cff;\n  text-decoration: inherit;\n}\na:hover {\n  color: #535bf2;\n}\n\nbody {\n  margin: 0;\n  display: flex;\n  place-items: center;\n  min-width: 320px;\n  min-height: 100vh;\n}\n\nh1 {\n  font-size: 3.2em;\n  line-height: 1.1;\n}\n\nbutton {\n  border-radius: 8px;\n  border: 1px solid transparent;\n  padding: 0.6em 1.2em;\n  font-size: 1em;\n  font-weight: 500;\n  font-family: inherit;\n  background-color: #1a1a1a;\n  cursor: pointer;\n  transition: border-color 0.25s;\n}\nbutton:hover {\n  border-color: #646cff;\n}\nbutton:focus,\nbutton:focus-visible {\n  outline: 4px auto -webkit-focus-ring-color;\n}\n\n@media (prefers-color-scheme: light) {\n  :root {\n    color: #213547;\n    background-color: #ffffff;\n  }\n  a:hover {\n    color: #747bff;\n  }\n  button {\n    background-color: #f9f9f9;\n  }\n}\n"
+        }
+      },
+      "index.tsx": {
+        "file": {
+          "contents": "/* @refresh reload */\nimport { render } from 'solid-js/web'\n\nimport './index.css'\nimport App from './App'\n\nconst root = document.getElementById('root')\n\nrender(() => <App />, root!)\n"
+        }
+      },
+      "vite-env.d.ts": {
+        "file": { "contents": "/// <reference types=\"vite/client\" />\n" }
+      }
+    }
+  },
+  "tsconfig.json": {
+    "file": {
+      "contents": "{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"useDefineForClassFields\": true,\n    \"module\": \"ESNext\",\n    \"lib\": [\"ES2020\", \"DOM\", \"DOM.Iterable\"],\n    \"skipLibCheck\": true,\n\n    /* Bundler mode */\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"noEmit\": true,\n    \"jsx\": \"preserve\",\n    \"jsxImportSource\": \"solid-js\",\n\n    /* Linting */\n    \"strict\": true,\n    \"noUnusedLocals\": true,\n    \"noUnusedParameters\": true,\n    \"noFallthroughCasesInSwitch\": true\n  },\n  \"include\": [\"src\"],\n  \"references\": [{ \"path\": \"./tsconfig.node.json\" }]\n}\n"
+    }
+  },
+  "tsconfig.node.json": {
+    "file": {
+      "contents": "{\n  \"compilerOptions\": {\n    \"composite\": true,\n    \"skipLibCheck\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"bundler\",\n    \"allowSyntheticDefaultImports\": true,\n    \"strict\": true\n  },\n  \"include\": [\"vite.config.ts\"]\n}\n"
+    }
+  },
+  "vite.config.ts": {
+    "file": {
+      "contents": "import { defineConfig } from 'vite'\nimport solid from 'vite-plugin-solid'\n\nexport default defineConfig({\n  plugins: [solid()],\n})\n"
+    }
+  }
+}

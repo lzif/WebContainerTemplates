@@ -1,0 +1,64 @@
+{
+  ".gitignore": {
+    "file": {
+      "contents": "# build output\ndist/\n# generated types\n.astro/\n\n# dependencies\nnode_modules/\n\n# logs\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\n\n\n# environment variables\n.env\n.env.production\n\n# macOS-specific files\n.DS_Store\n\n# jetbrains setting folder\n.idea/\n"
+    }
+  },
+  ".vscode": {
+    "directory": {
+      "extensions.json": {
+        "file": {
+          "contents": "{\n  \"recommendations\": [\"astro-build.astro-vscode\"],\n  \"unwantedRecommendations\": []\n}\n"
+        }
+      },
+      "launch.json": {
+        "file": {
+          "contents": "{\n  \"version\": \"0.2.0\",\n  \"configurations\": [\n    {\n      \"command\": \"./node_modules/.bin/astro dev\",\n      \"name\": \"Development server\",\n      \"request\": \"launch\",\n      \"type\": \"node-terminal\"\n    }\n  ]\n}\n"
+        }
+      }
+    }
+  },
+  "README.md": {
+    "file": {
+      "contents": "# Astro Starter Kit: Minimal\n\n```sh\nnpm create astro@latest -- --template minimal\n```\n\n[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)\n[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)\n[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)\n\n> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!\n\n## 🚀 Project Structure\n\nInside of your Astro project, you'll see the following folders and files:\n\n```text\n/\n├── public/\n├── src/\n│   └── pages/\n│       └── index.astro\n└── package.json\n```\n\nAstro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.\n\nThere's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.\n\nAny static assets, like images, can be placed in the `public/` directory.\n\n## 🧞 Commands\n\nAll commands are run from the root of the project, from a terminal:\n\n| Command                   | Action                                           |\n| :------------------------ | :----------------------------------------------- |\n| `npm install`             | Installs dependencies                            |\n| `npm run dev`             | Starts local dev server at `localhost:4321`      |\n| `npm run build`           | Build your production site to `./dist/`          |\n| `npm run preview`         | Preview your build locally, before deploying     |\n| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |\n| `npm run astro -- --help` | Get help using the Astro CLI                     |\n\n## 👀 Want to learn more?\n\nFeel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).\n"
+    }
+  },
+  "astro.config.mjs": {
+    "file": {
+      "contents": "import { defineConfig } from 'astro/config';\n\n// https://astro.build/config\nexport default defineConfig({});\n"
+    }
+  },
+  "package.json": {
+    "file": {
+      "contents": "{\n  \"name\": \"astro\",\n  \"type\": \"module\",\n  \"version\": \"0.0.1\",\n  \"scripts\": {\n    \"dev\": \"astro dev\",\n    \"start\": \"astro dev\",\n    \"build\": \"astro check && astro build\",\n    \"preview\": \"astro preview\",\n    \"astro\": \"astro\"\n  },\n  \"dependencies\": {\n    \"astro\": \"^4.8.3\",\n    \"@astrojs/check\": \"^0.6.0\",\n    \"typescript\": \"^5.4.5\"\n  }\n}"
+    }
+  },
+  "public": {
+    "directory": {
+      "favicon.svg": {
+        "file": {
+          "contents": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 128 128\">\n    <path d=\"M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z\" />\n    <style>\n        path { fill: #000; }\n        @media (prefers-color-scheme: dark) {\n            path { fill: #FFF; }\n        }\n    </style>\n</svg>\n"
+        }
+      }
+    }
+  },
+  "src": {
+    "directory": {
+      "env.d.ts": {
+        "file": { "contents": "/// <reference types=\"astro/client\" />\n" }
+      },
+      "pages": {
+        "directory": {
+          "index.astro": {
+            "file": {
+              "contents": "---\n\n---\n\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width\" />\n\t\t<meta name=\"generator\" content={Astro.generator} />\n\t\t<title>Astro</title>\n\t</head>\n\t<body>\n\t\t<h1>Astro</h1>\n\t</body>\n</html>\n"
+            }
+          }
+        }
+      }
+    }
+  },
+  "tsconfig.json": {
+    "file": { "contents": "{\n  \"extends\": \"astro/tsconfigs/strict\"\n}" }
+  }
+}
